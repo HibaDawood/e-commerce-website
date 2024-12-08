@@ -1,0 +1,490 @@
+import Image from "next/image";
+import { IoIosArrowDown } from "react-icons/io";
+import { FaInstagram, FaStar } from "react-icons/fa6";
+import { TiSocialYoutube, TiMail } from "react-icons/ti";
+import { FaFacebook, FaTwitter, FaRegHeart, FaEye } from "react-icons/fa";
+import { FiPhone } from "react-icons/fi";
+import { IoIosSearch } from "react-icons/io";
+import { IoCartOutline } from "react-icons/io5";
+import { CiHeart } from "react-icons/ci";
+import { GoPerson } from "react-icons/go";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import Shop5 from "./shop-5";
+
+const categories = [
+  { name: "CLOTHES", items: 5, image: "/picture/card1.png" },
+  { name: "CLOTHES", items: 5, image: "/picture/card2.png" },
+  { name: "CLOTHES", items: 8, image: "/picture/card3.png" },
+  { name: "CLOTHES", items: 7, image: "/picture/card4.png" },
+  { name: "CLOTHES", items: 9, image: "/picture/card5.png" },
+];
+
+const brands = [
+  { name: "Hooli", logo: "/picture/fa1.png" },
+  { name: "Hooli", logo: "/picture/fa2.png" },
+  { name: "Lyft", logo: "/picture/fa3.png" },
+  { name: "Stripe", logo: "/picture/fa4.png" },
+  { name: "AWS", logo: "/picture/fa5.png" },
+  { name: "Reddit", logo: "/picture/fa6.png" },
+];
+
+interface Product {
+  id: number;
+  name: string;
+  department: string;
+  price: string;
+  image: string;
+  colors: string[];
+}
+
+const products: Product[] = [
+  {
+    id: 1,
+    name: "Graphic Design",
+    department: "Graphic Department",
+    price: "$6.48",
+    image: "/picture/Edi1.png",
+    colors: ["#FFE4E1", "#87CEEB", "#98FB98", "#DDA0DD"],
+  },
+  {
+    id: 2,
+    name: "Graphic Design",
+    department: "Graphic Department",
+    price: "$6.48",
+    image: "/picture/Edi5.png",
+    colors: ["#F0F8FF", "#FFE4E1", "#98FB98", "#DDA0DD"],
+  },
+  {
+    id: 3,
+    name: "Graphic Design",
+    department: "Graphic Department",
+    price: "$6.48",
+    image: "/picture/Edi8.png",
+    colors: ["#FFE4E1", "#87CEEB", "#98FB98", "#DDA0DD"],
+  },
+  {
+    id: 4,
+    name: "Graphic Design",
+    department: "Graphic Department",
+    price: "$6.48",
+    image: "/picture/Edi10.png",
+    colors: ["#FFE4E1", "#87CEEB", "#98FB98", "#DDA0DD"],
+  },
+  {
+    id: 5,
+    name: "Graphic Design",
+    department: "English Department",
+    price: "$6.48",
+    image: "/picture/Edi11.png",
+    colors: ["#FFE4E1", "#87CEEB", "#98FB98", "#DDA0DD"],
+  },
+  {
+    id: 6,
+    name: "Graphic Design",
+    department: "English Department",
+    price: "$6.48",
+    image: "/picture/Edi9.png",
+    colors: ["#FFE4E1", "#87CEEB", "#98FB98", "#DDA0DD"],
+  },
+  {
+    id: 7,
+    name: "Graphic Design",
+    department: "English Department",
+    price: "$6.48",
+    image: "/picture/Edi12.png",
+    colors: ["#FFE4E1", "#87CEEB", "#98FB98", "#DDA0DD"],
+  },
+  {
+    id: 8,
+    name: "Graphic Design",
+    department: "English Department",
+    price: "$6.48",
+    image: "/picture/Edi13.png",
+    colors: ["#FFE4E1", "#87CEEB", "#98FB98", "#DDA0DD"],
+  },
+  {
+    id: 8,
+    name: "Graphic Design",
+    department: "English Department",
+    price: "$6.48",
+    image: "/picture/Edi14.png",
+    colors: ["#FFE4E1", "#87CEEB", "#98FB98", "#DDA0DD"],
+  },
+  {
+    id: 8,
+    name: "Graphic Design",
+    department: "English Department",
+    price: "$6.48",
+    image: "/picture/Edi15.png",
+    colors: ["#FFE4E1", "#87CEEB", "#98FB98", "#DDA0DD"],
+  },
+  {
+    id: 8,
+    name: "Graphic Design",
+    department: "English Department",
+    price: "$6.48",
+    image: "/picture/Edi16.png",
+    colors: ["#FFE4E1", "#87CEEB", "#98FB98", "#DDA0DD"],
+  },
+  {
+    id: 8,
+    name: "Graphic Design",
+    department: "English Department",
+    price: "$6.48",
+    image: "/picture/Edi17.png",
+    colors: ["#FFE4E1", "#87CEEB", "#98FB98", "#DDA0DD"],
+  },
+];
+export default function Shop1() {
+  return (
+    <div>
+      <header className="bg-gray-100">
+        {/* Top Bar */}
+        <div className="flex justify-between items-center px-4 py-4 text-sm bg-green-700 text-white">
+          <div className="flex space-x-4">
+            <span className="flex">
+              <span className="text-lg ">
+                <FiPhone />
+              </span>
+              (231) 555-0110
+            </span>
+            <span>|</span>
+            <span className="flex">
+              {" "}
+              <span className="text-2xl -mt-1">
+                <TiMail />
+              </span>{" "}
+              michael.s@example.com
+            </span>
+          </div>
+          <h1>Follow us and get a chance to win 80% off</h1>
+          <div className="flex items-center space-x-4">
+            <span>Follow us:</span>
+            <div className="flex space-x-4 text-2xl pr-4 ">
+              <a href="#" className="hover:text-gray-400">
+                <FaInstagram />
+              </a>
+              <a href="#" className="hover:text-gray-400">
+                <TiSocialYoutube />
+              </a>
+              <a href="#" className="hover:text-gray-400">
+                <FaFacebook />
+              </a>
+              <a href="#" className="hover:text-gray-400">
+                <FaTwitter />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Navigation */}
+        <nav className="flex justify-between items-center px-4 py-4 shadow-md">
+          <div className="text-2xl font-bold text-gray-800">Bandage</div>
+          <ul className="flex space-x-6 text-gray-600 pr-72">
+            <li className="hover:text-blue-600">
+              <a href="/">Home</a>
+            </li>
+
+            <li className="hover:text-blue-600 flex">
+              <a href="/Shop">Shop</a>
+              <span className="pt-1 pl-2 pr-1 -mr-4">
+                <MdKeyboardArrowDown />
+              </span>
+            </li>
+
+            <li className="hover:text-blue-600">
+              <a href="/About">About</a>
+            </li>
+            <li className="hover:text-blue-600">
+              <a href="/Contact">Contact</a>
+            </li>
+            <li className="hover:text-blue-600">
+              <a href="#">Pages</a>
+            </li>
+          </ul>
+          <div className="flex">
+            <span className="text-lg pr-2">
+              <GoPerson />
+            </span>
+
+            <a href="#" className="text-gray-600 hover:text-blue-600 pr-5">
+              Login / Register
+            </a>
+            <div className="flex text-xl space-x-4 pr-5 font-semibold">
+              <IoIosSearch />
+              <IoCartOutline />
+              <CiHeart />
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div className="container mx-auto px-4 py-8">
+        {/* Breadcrumb */}
+        <nav className="flex items-center justify-between mb-8">
+          <div className="flex items-center gap-2 text-sm">
+            <a href="#" className="text-gray-600 hover:text-gray-900">
+              Home
+            </a>
+            <span className="text-gray-400">/</span>
+            <span className="font-medium">Shop</span>
+          </div>
+        </nav>
+
+        {/* Categories Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-8">
+          {categories.map((category, index) => (
+            <div
+              key={index}
+              className="relative aspect-[3/4] group overflow-hidden rounded-lg"
+            >
+              <Image
+                src={category.image}
+                alt={category.name}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white">
+                <h3 className="text-xl font-bold">{category.name}</h3>
+                <p className="text-sm">{category.items} items</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Filters */}
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+          <p className="text-lg text-gray-700 tracking-wide">
+            Showing all 12 results
+          </p>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <button className="p-2 hover:bg-gray-100 rounded-md"></button>
+            </div>
+
+            <button className="flex border-2 border-gray-300">
+              <div className="flex p-2 px-3 ">
+                Popularity
+                <div className="pt-1 pl-1">
+                  <IoIosArrowDown />
+                </div>
+              </div>
+            </button>
+            <button className="gap-2 bg-blue-400 text-white p-2 px-4">
+              Filter
+            </button>
+          </div>
+        </div>
+
+        {/* Brands */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center py-12 border-t">
+          {brands.map((brand, index) => (
+            <div key={index} className="flex items-center justify-center">
+              <Image
+                src={brand.logo}
+                alt={brand.name}
+                width={100}
+                height={50}
+                className="opacity-50 hover:opacity-100 transition-opacity"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="py-12 px-4 md:px-6 lg:px-8">
+        <div className="text-center mb-10">
+          <h3 className="text-sm text-gray-600 mb-2">Featured Products</h3>
+          <h2 className="text-2xl font-semibold">BESTSELLER PRODUCTS</h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {products.map((product) => (
+            <div key={product.id} className="group">
+              <div className="relative aspect-[3/4] mb-4 overflow-hidden">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className=" transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="text-center">
+                <h3 className="text-sm font-medium">{product.name}</h3>
+                <p className="text-sm text-gray-600 mb-2">
+                  {product.department}
+                </p>
+                <p className="text-sm font-semibold mb-3">{product.price}</p>
+                <div className="flex justify-center gap-2">
+                  {product.colors.map((color, index) => (
+                    <div
+                      key={index}
+                      className="w-3 h-3 rounded-full border border-gray-300"
+                      style={{ backgroundColor: color }}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* SHOP PAGE 3 */}
+
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid gap-8 md:grid-cols-2">
+          {/* Product Images */}
+          <div className="space-y-4">
+            <div className="relative aspect-square overflow-hidden rounded-lg bg-gray-100">
+              <Image
+                src="/picture/cr-1.png"
+                alt="Product image"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="flex gap-4">
+              {[1, 2].map(( index) => (
+                <div
+                  key={index}
+                  className={`relative aspect-square w-20 overflow-hidden rounded-lg bg-gray-100 ${
+                    index === 0 ? "ring-2 ring-black" : ""
+                  }`}
+                >
+                  <Image
+                    src="/picture/cr-2.png"
+                    alt={`Product thumbnail`}
+                    fill
+                    sizes="80px"
+                    className=""
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Product Info */}
+          <div className="space-y-6">
+            <div>
+              <h1 className="text-3xl font-bold">Floating Phone</h1>
+              <div className="mt-2 flex items-center gap-2">
+   
+                  <FaStar />
+                
+                <span  className="text-sm text-gray-500">(5 reviews)</span>
+              </div>
+            </div>
+
+            <div className="text-2xl font-bold">$1,139.33</div>
+
+            {/* Product Tabs */}
+            <div className="mt-8">
+              <div className="flex gap-4 border-b">
+                <button className="py-2 px-4 text-gray-600 border-b-2 border-transparent hover:border-black">
+                  Description
+                </button>
+                <button className="py-2 px-4 text-gray-600 border-b-2 border-transparent hover:border-black">
+                  Additional Information
+                </button>
+                <button className="py-2 px-4 text-gray-600 border-b-2 border-transparent hover:border-black">
+                  Reviews (5)
+                </button>
+              </div>
+              <div className="mt-4 text-gray-600">
+                <p>
+                  Experience the future of phone accessories with our Floating
+                  Phone stand. This innovative design lets you display your
+                  device in style.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 className="font-medium">Color</h3>
+              <div className="mt-2 flex gap-2">
+                {[
+                  "bg-yellow-400",
+                  "bg-blue-400",
+                  "bg-green-400",
+                  "bg-black",
+                ].map((color, index) => (
+                  <div
+                    key={index}
+                    className={`h-6 w-6 rounded-full ${color} ${
+                      index === 0 ? "ring-2 ring-black ring-offset-2" : ""
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                Add to Cart
+              </button>
+              <div className="flex px-2 text-xl gap-4">
+                <FaRegHeart />
+                <IoCartOutline />
+                <FaEye />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* SHOP PAGE 4 */}
+
+      <div className="container mx-auto py-12">
+        <div className="grid gap-8 md:grid-cols-2 items-center">
+          {/* Left Column - Image */}
+          <div className="relative bg-pink-100 p-8 rounded-lg">
+            <div className="relative aspect-[4/3] w-full">
+              <div className="absolute inset-0 border-8 border-white rounded-lg shadow-lg">
+                <Image
+                  src="/picture/shop-4-1.png"
+                  alt="Blog post image"
+                  fill
+                  className="rounded-lg"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Content */}
+          <div className="">
+
+            <h1 className="text-2xl font-bold md:text-3xl lg:text-4xl flex">
+              the quick fox jumps over
+            </h1><br /><br />
+            <div className=" text-gray-600 ">
+              <p>
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, sequi eveniet quasi officia 
+               architecto ipsam ab magnam maxime quia ut ipsum error adipisci et asperiores, laborum perspiciatis 
+              
+              </p><br /><br />
+              <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, sequi eveniet quasi officia 
+               architecto ipsam ab magnam maxime quia ut ipsum error adipisci et asperiores, laborum perspiciatis 
+           
+              </p><br /><br />
+              <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, sequi eveniet quasi officia 
+               architecto ipsam ab magnam maxime quia ut ipsum error adipisci et asperiores, laborum perspiciatis 
+            
+              </p>
+            </div>
+            </div>
+           
+        
+        
+        </div>
+      </div>
+
+
+
+      {/* SHOP PAGE 5 */}
+
+      <Shop5 />
+    </div>
+  );
+}
