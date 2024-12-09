@@ -27,6 +27,8 @@ export default function Hero1() {
                   src="/picture/row.png"
                   alt="Model wearing Vita Classic Product"
                   className="h-full w-full object-center"
+                  width={1110}
+                  height={1110}
                 />
               </div>
             </div>

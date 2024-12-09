@@ -13,31 +13,29 @@ export default function HeroSection() {
   return (
     <div className="w-full">
       {/* Top Bar */}
-
-      {/* Navigation */}
       <header className="bg-gray-100">
         {/* Top Bar */}
-        <div className="flex justify-between items-center px-4 py-4 text-sm bg-gray-900 text-white">
+        <div className="lg:flex md:flex sm:hidden  justify-between lg:justify-between  lg:items-center items-center px-4 py-4 text-sm bg-gray-900
+         text-white sm:w-full md:w-full">
           <div className="flex space-x-4">
             <span className="flex">
-              <span className="text-lg ">
+              <span className="text-lg">
                 <FiPhone />
               </span>
               (231) 555-0110
             </span>
             <span>|</span>
             <span className="flex">
-              {" "}
               <span className="text-2xl -mt-1">
                 <TiMail />
-              </span>{" "}
+              </span>
               michael.s@example.com
             </span>
           </div>
-          <h1>Follow us and get a chance to win 80% off</h1>
+          <h1 className="text-center md:text-left">Follow us and get a chance to win 80% off</h1>
           <div className="flex items-center space-x-4">
             <span>Follow us:</span>
-            <div className="flex space-x-4 text-2xl pr-4 ">
+            <div className="flex space-x-4 text-2xl pr-4">
               <a href="#" className="hover:text-gray-400">
                 <FaInstagram />
               </a>
@@ -55,10 +53,10 @@ export default function HeroSection() {
         </div>
 
         {/* Main Navigation */}
-        <nav className="flex justify-between items-center px-4 py-4 shadow-md">
+        <nav className="sm:flex-none lg:flex lg:justify-between lg:items-center  md:flex md:justify-between md:items-center px-4 lgpy-4 shadow-md">
           <div className="text-2xl font-bold text-gray-800">Bandage</div>
-          <ul className="flex space-x-6 text-gray-600 pr-72">
-            <li className="hover:text-blue-600">
+          <ul className="sm:flex-none lg:mt-4 md:flex sm:mb-8 sm:ml-36 lg:flex space-x-6 md:space-x-2 text-gray-600 md:flex-wrap justify-center sm:space-x-4">
+            <li className="hover:text-blue-600 sm:ml-4">
               <a href="/">Home</a>
             </li>
 
@@ -76,10 +74,13 @@ export default function HeroSection() {
               <a href="/Contact">Contact</a>
             </li>
             <li className="hover:text-blue-600">
-              <a href="#">Pages</a>
+              <a href="/Pricing">Pricing</a>
+            </li>
+            <li className="hover:text-blue-600">
+              <a href="/Pages">Pages</a>
             </li>
           </ul>
-          <div className="flex">
+          <div className="flex items-center space-x-4">
             <span className="text-lg pr-2">
               <GoPerson />
             </span>
@@ -97,14 +98,14 @@ export default function HeroSection() {
       </header>
 
       {/* Hero Section */}
-      <div className="relative h-[600px] md:h-[700px]  hero-img overflow-hidden ">
-        <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-16 z-10 ">
+      <div className=" relative sm:h-[500px] md:h-[700px] lg:h-[800px] hero-img overflow-hidden">
+        <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-16 z-10">
           <div className="max-w-xl -mt-40">
-            <span className="text-white mb-4 block">SUMMER 2020</span>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <span className="text-white mb-4 block text-center sm:text-left">SUMMER 2020</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 text-center sm:text-left">
               NEW COLLECTION
             </h1>
-            <p className="text-white text-lg mb-8">
+            <p className="text-white text-lg mb-8 text-center sm:text-left">
               We know how large objects will act, but things on a small scale
             </p>
             <button className="bg-green-500 text-primary p-3 text-white font-bold tracking-wider px-6">
@@ -112,12 +113,24 @@ export default function HeroSection() {
             </button>
           </div>
         </div>
-        <div className="absolute h-[42rem] w-full  hidden md:block">
+
+        {/* Background Image */}
+        <div className="absolute inset-0 w-full h-full md:hidden">
           <Image
             src="/picture/t1.jpg"
             alt="Fashion model with shopping bags"
-            width={500}
-            height={700}
+            width={1500}
+            height={1700}
+            className="object-cover h-full w-full"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 hidden md:block">
+          <Image
+            src="/picture/t1.jpg"
+            alt="Fashion model with shopping bags"
+            width={1500}
+            height={1700}
             className="object-cover h-[42rem] w-full"
             priority
           />

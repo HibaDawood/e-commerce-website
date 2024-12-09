@@ -1,22 +1,31 @@
-import Image from "next/image";
+"use client"
+
+import Image from "next/image"
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { FaInstagram} from "react-icons/fa6";
+import { TiSocialYoutube, TiMail } from "react-icons/ti";
+import { FaFacebook, FaTwitter} from "react-icons/fa";
+import { FiPhone } from "react-icons/fi";
 import { IoIosSearch } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { GoPerson } from "react-icons/go";
-import { MdKeyboardArrowDown } from "react-icons/md";
-import { FaInstagram } from "react-icons/fa6";
-import { TiSocialYoutube, TiMail } from "react-icons/ti";
-import { FaFacebook, FaTwitter } from "react-icons/fa";
-import { FiPhone } from "react-icons/fi";
 
+export default function Pricing1() {
 
+  const brands = [
+    { name: "Hooli", logo: "/picture/fa1.png" },
+    { name: "Hooli", logo: "/picture/fa2.png" },
+    { name: "Lyft", logo: "/picture/fa3.png" },
+    { name: "Stripe", logo: "/picture/fa4.png" },
+    { name: "AWS", logo: "/picture/fa5.png" },
+    { name: "Reddit", logo: "/picture/fa6.png" },
+  ];
 
-
-export default function About() {
   return (
     <div>
-      {/* Main Navigation */}
-      <header className="bg-gray-100">
+     {/* Main Navigation */}
+     <header className="bg-gray-100">
         {/* Top Bar */}
         <div className="flex sm:hidden justify-between items-center px-4 py-4 text-sm bg-green-700 text-white">
           <div className="flex space-x-4">
@@ -102,43 +111,71 @@ export default function About() {
 
 
 
-     
-    <section className="container mx-auto px-4 py-16 md:py-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div className="space-y-6 lg:ml-28 lg:-mt-20 ">
-          <div className="space-y-4">
-            <p className="text-sm font-medium uppercase tracking-wider text-gray-600">
-              ABOUT COMPANY
-            </p>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-              ABOUT US
-            </h2>
-            <p className="text-lg text-gray-600">
-              We know how large objects will act,
-              <br />
-              but things on a small scale
-            </p>
-          </div>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-2 rounded-md">
-            Get Quote Now
-          </button>
-        </div>
-        <div className="relative lg:-mt-20">
-          <div className="absolute inset-0 bg-pink-100 rounded-full transform scale-90 translate-x-4"></div>
-          <div className="relative">
-            <Image
-              src="/picture/about-1.png"
-              alt="Shopping woman"
-              width={500}
-              height={600}
-              className="relative z-10"
-            />
-          </div>
-          <div className="absolute top-10 right-10 w-4 h-4 bg-purple-400 rounded-full"></div>
-          <div className="absolute bottom-20 left-10 w-4 h-4 bg-purple-400 rounded-full"></div>
+    <div className="max-w-6xl mx-auto px-4 py-16">
+
+      {/* Header */}
+      <div className="text-center mb-16 py-5 bg-gray-50">
+        <p className="text-sm text-gray-500 font-semibold uppercase mb-4">PRICING</p>
+        <h1 className="text-5xl font-bold mb-7">Simple Pricing</h1>
+        <div className="flex items-center justify-center gap-2 text-sm">
+          <span className="text-black font-semibold">Home</span>
+          <span className="text-gray-400">/</span>
+          <span className="text-gray-500 font-semibold">Pricing</span>
         </div>
       </div>
-    </section>
+
+      {/* Subtitle */}
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold mb-2">Pricing</h2>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Problems trying to resolve the conflict between <br />
+          the two major realms of Classical physics: Newtonian mechanics
+        </p>
+      </div>
+
+   
+
+      {/* Trust Badge */}
+      <div className="flex justify-center gap-5 mb-32">
+      <div className="text-center  text-black font-semibold mt-2">
+        Monthly
+      </div>
+      <div>
+        <Image src={"/picture/button.png"} alt="on / off" width={40} height={40} className="mt-2.5"/>
+      </div>
+      <div className="text-center text-black font-semibold  mt-2">
+        Yearly
+      </div>
+      <button className="bg-blue-300 p-2 px-5 text-blue-700 rounded-3xl font-medium">save 25%</button>
+    </div>
+
+
+<div className="flex justify-center">
+    <Image src={"/picture/image3.png"} width={300} height={600} alt="fsss" className="h-[20rem]  ">
+    </Image>
+    <Image src={"/picture/image2.png"} width={320} height={700} alt="fsss" className="h-[23rem] -mt-10">
+    </Image>
+    <Image src={"/picture/image1.png"} width={300} height={600} alt="fsss" className="h-[20rem]">
+    </Image>
+</div>
+
+    </div>
+
+<h1 className="text-xl font-bold text-gray-700 text-center mt-10">Trusted By Over 4,000 Big Companies</h1>
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center py-12 pt-32">
+          {brands.map((brand, index) => (
+            <div key={index} className="flex items-center justify-center">
+              <Image
+                src={brand.logo}
+                alt={brand.name}
+                width={100}
+                height={50}
+                className="opacity-50 hover:opacity-100 transition-opacity"
+              />
+            </div>
+          ))}
+        </div>
+    
     </div>
   )
 }

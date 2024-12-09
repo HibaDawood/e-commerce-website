@@ -9,7 +9,7 @@ export default function ProductView() {
       <div className="grid gap-8 md:grid-cols-2">
         {/* Product Images */}
         <div className="space-y-4">
-          <div className="relative aspect-square overflow-hidden rounded-lg bg-gray-100">
+          <div className="relative aspect-square overflow-x-hidden rounded-lg bg-gray-100">
             <Image
               src="/placeholder.svg"
               alt="Product image"
@@ -22,7 +22,7 @@ export default function ProductView() {
             {[1, 2].map((index) => (
               <div
                 key={index}
-                className={`relative aspect-square w-20 overflow-hidden rounded-lg bg-gray-100 ${
+                className={`relative aspect-square w-20  overflow-hidden rounded-lg bg-gray-100 ${
                   index === 0 ? "ring-2 ring-black" : ""
                 }`}
               >
@@ -31,7 +31,7 @@ export default function ProductView() {
                   alt={`Product thumbnail ${index + 1}`}
                   fill
                   sizes="80px"
-                  className="object-cover"
+                  className=" object-cover "
                 />
               </div>
             ))}

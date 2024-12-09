@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { TbBrandWindowsFilled } from "react-icons/tb";
 import { IoIosArrowDown } from "react-icons/io";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { FaInstagram, FaStar } from "react-icons/fa6";
 import { TiSocialYoutube, TiMail } from "react-icons/ti";
 import { FaFacebook, FaTwitter, FaRegHeart, FaEye } from "react-icons/fa";
@@ -140,7 +142,7 @@ export default function Shop1() {
     <div>
       <header className="bg-gray-100">
         {/* Top Bar */}
-        <div className="flex justify-between items-center px-4 py-4 text-sm bg-green-700 text-white">
+        <div className="flex sm:hidden justify-between items-center px-4 py-4 text-sm bg-green-700 text-white">
           <div className="flex space-x-4">
             <span className="flex">
               <span className="text-lg ">
@@ -178,10 +180,10 @@ export default function Shop1() {
         </div>
 
         {/* Main Navigation */}
-        <nav className="flex justify-between items-center px-4 py-4 shadow-md">
+        <nav className="sm:flex-none lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center px-4 lgpy-4 shadow-md">
           <div className="text-2xl font-bold text-gray-800">Bandage</div>
-          <ul className="flex space-x-6 text-gray-600 pr-72">
-            <li className="hover:text-blue-600">
+          <ul className="sm:flex-none sm:mb-8 sm:ml-36 lg:flex space-x-6 md:space-x-2 text-gray-600 md:flex-wrap justify-center sm:space-x-4">
+            <li className="hover:text-blue-600 sm:ml-4">
               <a href="/">Home</a>
             </li>
 
@@ -199,10 +201,13 @@ export default function Shop1() {
               <a href="/Contact">Contact</a>
             </li>
             <li className="hover:text-blue-600">
-              <a href="#">Pages</a>
+              <a href="/Pricing">Pricing</a>
+            </li>
+            <li className="hover:text-blue-600">
+              <a href="/Pages">Pages</a>
             </li>
           </ul>
-          <div className="flex">
+          <div className="flex items-center space-x-4">
             <span className="text-lg pr-2">
               <GoPerson />
             </span>
@@ -257,6 +262,11 @@ export default function Shop1() {
           <p className="text-lg text-gray-700 tracking-wide">
             Showing all 12 results
           </p>
+          <p className="flex gap-4 ">
+             <span className="mt-2 text-gray-500 text-xl">view:</span> 
+             <span className="text-xl border-2 border-gray-300 p-3"><TbBrandWindowsFilled /></span>
+             <span className="text-xl border-2 border-gray-300 p-3"><RxHamburgerMenu /></span>
+              </p>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <button className="p-2 hover:bg-gray-100 rounded-md"></button>
@@ -352,13 +362,15 @@ export default function Shop1() {
                     index === 0 ? "ring-2 ring-black" : ""
                   }`}
                 >
+                  <div className="h-[25rem] w-[20rem]">
                   <Image
                     src="/picture/cr-2.png"
                     alt={`Product thumbnail`}
                     fill
                     sizes="80px"
-                    className=""
+                    className="h-[25rem] w-[20rem]"
                   />
+                  </div>
                 </div>
               ))}
             </div>
@@ -433,52 +445,58 @@ export default function Shop1() {
 
       {/* SHOP PAGE 4 */}
 
-      <div className="container mx-auto py-12">
-        <div className="grid gap-8 md:grid-cols-2 items-center">
-          {/* Left Column - Image */}
-          <div className="relative bg-pink-100 p-8 rounded-lg">
-            <div className="relative aspect-[4/3] w-full">
-              <div className="absolute inset-0 border-8 border-white rounded-lg shadow-lg">
-                <Image
-                  src="/picture/shop-4-1.png"
-                  alt="Blog post image"
-                  fill
-                  className="rounded-lg"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
+      <div className="container mx-auto p-6 bg-rose-100">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {/* Left Image Section */}
+    <div className="col-span-1 sm:col-span-2 lg:col-span-1">
+      <div className="bg-gray-100 rounded-lg shadow-md p-4">
+        <Image
+          src="/picture/shop.png"
+          alt="Decorative"
+          className="rounded-lg w-full h-full object-cover"
+        />
+      </div>
+    </div>
 
-          {/* Right Column - Content */}
-          <div className="">
+    {/* Right Text Section */}
+    <div className="col-span-1 sm:col-span-2 lg:col-span-2 grid grid-cols-1 gap-6">
+      {/* Text Block 1 */}
+      <div className="bg-gray-50 p-4 rounded-lg shadow-md sm:text-sm">
+        <h3 className="text-xl font-bold mb-2">The quick fox jumps over</h3>
+        <p className="text-sm text-gray-700 mb-4">
+          Lorem ipsum dolor sit amet, exercitationem libero molestias voluptatem aliquam laudantium recusandae eaque provident aliquid voluptas nobis culpa fugiat blanditiis. Nesciunt?
+        </p>
+        <p className="text-sm text-gray-700 mb-4">
+          Lorem ipsum dolor sit amet, exercitationem libero molestias voluptatem aliquam laudantium recusandae eaque provident aliquid voluptas nobis culpa fugiat blanditiis. Nesciunt?
+        </p>
+        <p className="text-sm text-gray-700 ">
+          Lorem ipsum dolor sit amet, exercitationem libero molestias voluptatem aliquam laudantium recusandae eaque provident aliquid voluptas nobis culpa fugiat blanditiis. Nesciunt?
+        </p>
+      </div>
 
-            <h1 className="text-2xl font-bold md:text-3xl lg:text-4xl flex">
-              the quick fox jumps over
-            </h1><br /><br />
-            <div className=" text-gray-600 ">
-              <p>
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, sequi eveniet quasi officia 
-               architecto ipsam ab magnam maxime quia ut ipsum error adipisci et asperiores, laborum perspiciatis 
-              
-              </p><br /><br />
-              <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, sequi eveniet quasi officia 
-               architecto ipsam ab magnam maxime quia ut ipsum error adipisci et asperiores, laborum perspiciatis 
-           
-              </p><br /><br />
-              <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, sequi eveniet quasi officia 
-               architecto ipsam ab magnam maxime quia ut ipsum error adipisci et asperiores, laborum perspiciatis 
-            
-              </p>
-            </div>
-            </div>
-           
-        
-        
+      {/* Text Block 2 */}
+      <div className="grid sm:grid-cols-1 gap-6">
+        <div className="bg-gray-50 p-4 rounded-lg shadow-md h-[11rem]">
+          <h3 className="text-xl font-bold mb-2">The quick fox jumps over</h3>
+          <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700">
+            <li>The quick brown fox jumps over the lazy dog.</li>
+            <li>The quick brown fox jumps over the lazy dog.</li>
+            <li className="sm:hidden">The quick brown fox jumps over the lazy dog.</li>
+          </ul>
+        </div>
+        <div className="bg-gray-50 p-4 rounded-lg shadow-md h-[10rem]">
+          <h3 className="text-xl font-bold mb-2">The quick fox jumps over</h3>
+          <ul className="list-disc pl-5 space-y-0 text-sm text-gray-700">
+            <li>The quick brown fox jumps over the lazy dog.</li>
+            <li>The quick brown fox jumps over the lazy dog.</li>
+            <li className="sm:hidden">The quick brown fox jumps over the lazy dog.</li>
+          </ul>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
 
 
 
