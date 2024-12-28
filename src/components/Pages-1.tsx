@@ -2,12 +2,7 @@ import Image from "next/image";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaFacebook, FaTwitter, FaInstagram,FaLinkedin, FaFacebookSquare} from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
-import { TiSocialYoutube, TiMail } from "react-icons/ti";
-import { FiPhone } from "react-icons/fi";
-import { IoIosSearch } from "react-icons/io";
-import { IoCartOutline } from "react-icons/io5";
-import { CiHeart } from "react-icons/ci";
-import { GoPerson } from "react-icons/go";
+
 
 export default function Pages1() {
     interface TeamMember {
@@ -77,53 +72,24 @@ export default function Pages1() {
     <div>
     
     <header className="bg-gray-100">
-        {/* Top Bar */}
-        <div className="flex sm:hidden lg:flex justify-between items-center px-4 py-4 text-sm bg-green-700 text-white">
-          <div className="flex space-x-4">
-            <span className="flex">
-              <span className="text-lg ">
-                <FiPhone />
-              </span>
-              (231) 555-0110
-            </span>
-            <span>|</span>
-            <span className="flex">
-              {" "}
-              <span className="text-2xl -mt-1">
-                <TiMail />
-              </span>{" "}
-              michael.s@example.com
-            </span>
-          </div>
-          <h1>Follow us and get a chance to win 80% off</h1>
-          <div className="flex items-center space-x-4">
-            <span>Follow us:</span>
-            <div className="flex space-x-4 text-2xl pr-4 ">
-              <a href="#" className="hover:text-gray-400">
-                <FaInstagram />
-              </a>
-              <a href="#" className="hover:text-gray-400">
-                <TiSocialYoutube />
-              </a>
-              <a href="#" className="hover:text-gray-400">
-                <FaFacebook />
-              </a>
-              <a href="#" className="hover:text-gray-400">
-                <FaTwitter />
-              </a>
-            </div>
-          </div>
-        </div>
+      
 
         {/* Main Navigation */}
-        <nav className="sm:flex-none lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center px-4 lgpy-4 shadow-md">
+        <nav
+          className="lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center px-4
+          shadow-md"
+        >
           <div className="text-2xl font-bold text-gray-800">Bandage</div>
-          <ul className="sm:flex-none sm:mb-8 sm:ml-36 lg:flex space-x-6 md:space-x-2 text-gray-600 md:flex-wrap justify-center sm:space-x-4">
-            <li className="hover:text-blue-600 sm:ml-4">
+          <ul
+            className="xs:inline-flex sm:inline-flex xs:my-5 sm:my-5 xs:space-x-2 sm:space-x-2 
+          xs:text-[15px] sm:text-[15px] lg:mt-4 md:flex
+            lg:flex lg:space-x-6 md:space-x-2 text-gray-600 md:flex-wrap justify-center"
+          >
+            <li className="hover:text-blue-600">
               <a href="/">Home</a>
             </li>
 
-            <li className="hover:text-blue-600 flex">
+            <li className="hover:text-blue-600 flex xs:flex-none sm:flex-none">
               <a href="/Shop">Shop</a>
               <span className="pt-1 pl-2 pr-1 -mr-4">
                 <MdKeyboardArrowDown />
@@ -143,19 +109,18 @@ export default function Pages1() {
               <a href="/Pages">Pages</a>
             </li>
           </ul>
-          <div className="flex items-center space-x-4">
-            <span className="text-lg pr-2">
-              <GoPerson />
-            </span>
-
-            <a href="#" className="text-gray-600 hover:text-blue-600 pr-5">
-              Login / Register
-            </a>
-            <div className="flex text-xl space-x-4 pr-5 font-semibold">
-              <IoIosSearch />
-              <IoCartOutline />
-              <CiHeart />
-            </div>
+          <div className="sm:flex md:flex lg:flex xs:py-2 sm:gap-28 xs:flex-none xs:ml-24 ">
+            <p className="lg:mt-2 lg:mr-12 md:mr-20 text-blue-500 xs:mt-2 sm:mt-2 font-bold">
+              Login
+            </p>
+            <button
+              className="md:text-sm sm:w-[400px] sm:text-center sm:tracking-tighter sm:p-1 xs:p-1
+          sm:h-12 sm:text-[15px] md:px-5 md:py-2.5 sm:mb-3 xs:mb-3
+          md:tracking-tighter md:w-44 md:-ml-11 lg:w-44 lg:px-6 lg:py-3 bg-blue-500 text-white 
+          lg:text-sm rounded-md"
+            >
+              Become a member ➡️{" "}
+            </button>
           </div>
         </nav>
       </header>
@@ -238,7 +203,7 @@ export default function Pages1() {
 
      {/* Team Members Grid */}
      <h1 className="text-3xl text-center font-semibold text-gray-800 mt-10">Meet Our Team</h1>
-     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24">
+     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-24">
         {teamMembers.map((member, index) => (
           <div key={index} className="flex flex-col items-center w-[23rem] mx-auto h-[25rem]">
             {/* Image Container */}
@@ -249,6 +214,8 @@ export default function Pages1() {
                 src={member.image}
                 alt={member.name}
                 className="w-full h-full object-cover"
+                width={300}
+                height={300}
               />
             </div>
 
@@ -328,4 +295,3 @@ export default function Pages1() {
     </div>
   )
 }
-

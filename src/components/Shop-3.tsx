@@ -1,7 +1,4 @@
-
-
 import Image from "next/image";
-
 
 export default function ProductView() {
   return (
@@ -43,9 +40,7 @@ export default function ProductView() {
           <div>
             <h1 className="text-3xl font-bold">Floating Phone</h1>
             <div className="mt-2 flex items-center gap-2">
-              {Array.from({ length: 5 }).map(() => (
-              "j"
-              ))}
+              {Array.from({ length: 5 }).map(() => "j")}
               <span className="text-sm text-gray-500">(5 reviews)</span>
             </div>
           </div>
@@ -96,8 +91,9 @@ export default function ProductView() {
             </div>
             <div className="mt-4 text-gray-600">
               <p>
-                Experience the future of phone accessories with our Floating Phone stand.
-                This innovative design lets you display your device in style.
+                Experience the future of phone accessories with our Floating
+                Phone stand. This innovative design lets you display your device
+                in style.
               </p>
             </div>
           </div>

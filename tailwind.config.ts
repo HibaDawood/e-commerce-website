@@ -8,7 +8,9 @@ const config: Config = {
   ],
   theme: {
     screens: {
-       'sm': '300px',
+      'xs': '300px',
+
+      'sm': '500px',
       // => @media (min-width: 300px) { ... }
 
       'md': '768px',
@@ -23,6 +25,7 @@ const config: Config = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
+   
     extend: {
       colors: {
         background: "var(--background)",

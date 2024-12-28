@@ -15,8 +15,10 @@ export default function HeroSection() {
       {/* Top Bar */}
       <header className="bg-gray-100">
         {/* Top Bar */}
-        <div className="lg:flex md:flex sm:hidden  justify-between lg:justify-between  lg:items-center items-center px-4 py-4 text-sm bg-gray-900
-         text-white sm:w-full md:w-full">
+        <div
+          className="lg:flex xs:hidden md:flex sm:hidden  justify-between lg:justify-between  lg:items-center items-center px-4 py-4 text-sm bg-gray-900
+         text-white sm:w-full md:w-full"
+        >
           <div className="flex space-x-4">
             <span className="flex">
               <span className="text-lg">
@@ -32,7 +34,9 @@ export default function HeroSection() {
               michael.s@example.com
             </span>
           </div>
-          <h1 className="text-center md:text-left">Follow us and get a chance to win 80% off</h1>
+          <h1 className="text-center md:text-left">
+            Follow us and get a chance to win 80% off
+          </h1>
           <div className="flex items-center space-x-4">
             <span>Follow us:</span>
             <div className="flex space-x-4 text-2xl pr-4">
@@ -53,14 +57,21 @@ export default function HeroSection() {
         </div>
 
         {/* Main Navigation */}
-        <nav className="sm:flex-none lg:flex lg:justify-between lg:items-center  md:flex md:justify-between md:items-center px-4 lgpy-4 shadow-md">
+        <nav
+          className="lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center px-4
+          shadow-md"
+        >
           <div className="text-2xl font-bold text-gray-800">Bandage</div>
-          <ul className="sm:flex-none lg:mt-4 md:flex sm:mb-8 sm:ml-36 lg:flex space-x-6 md:space-x-2 text-gray-600 md:flex-wrap justify-center sm:space-x-4">
-            <li className="hover:text-blue-600 sm:ml-4">
+          <ul
+            className="xs:inline-flex sm:inline-flex xs:my-5 sm:my-5 xs:space-x-2 sm:space-x-2 
+          xs:text-[15px] sm:text-[15px] lg:mt-4 md:flex
+            lg:flex lg:space-x-6 md:space-x-2 text-gray-600 md:flex-wrap justify-center"
+          >
+            <li className="hover:text-blue-600">
               <a href="/">Home</a>
             </li>
 
-            <li className="hover:text-blue-600 flex">
+            <li className="hover:text-blue-600 flex xs:flex-none sm:flex-none">
               <a href="/Shop">Shop</a>
               <span className="pt-1 pl-2 pr-1 -mr-4">
                 <MdKeyboardArrowDown />
@@ -80,7 +91,7 @@ export default function HeroSection() {
               <a href="/Pages">Pages</a>
             </li>
           </ul>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 sm:mb-2 xs:mb-2">
             <span className="text-lg pr-2">
               <GoPerson />
             </span>
@@ -98,10 +109,12 @@ export default function HeroSection() {
       </header>
 
       {/* Hero Section */}
-      <div className=" relative sm:h-[500px] md:h-[700px] lg:h-[800px] hero-img overflow-hidden">
+      <div className=" relative xs:h-[400px] sm:h-[500px] md:h-[700px] lg:h-[800px] hero-img overflow-hidden">
         <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-16 z-10">
           <div className="max-w-xl -mt-40">
-            <span className="text-white mb-4 block text-center sm:text-left">SUMMER 2020</span>
+            <span className="text-white mb-4 block text-center sm:text-left">
+              SUMMER 2020
+            </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 text-center sm:text-left">
               NEW COLLECTION
             </h1>
@@ -115,7 +128,7 @@ export default function HeroSection() {
         </div>
 
         {/* Background Image */}
-        <div className="absolute inset-0 w-full h-full md:hidden">
+        <div className="absolute inset-0 w-full h-full ">
           <Image
             src="/picture/t1.jpg"
             alt="Fashion model with shopping bags"

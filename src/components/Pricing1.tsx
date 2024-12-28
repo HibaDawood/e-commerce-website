@@ -2,14 +2,12 @@
 
 import Image from "next/image"
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { FaInstagram} from "react-icons/fa6";
+
+import { FaTwitter, FaInstagram } from "react-icons/fa";
 import { TiSocialYoutube, TiMail } from "react-icons/ti";
-import { FaFacebook, FaTwitter} from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
-import { IoIosSearch } from "react-icons/io";
-import { IoCartOutline } from "react-icons/io5";
-import { CiHeart } from "react-icons/ci";
-import { GoPerson } from "react-icons/go";
+
 
 export default function Pricing1() {
 
@@ -25,54 +23,61 @@ export default function Pricing1() {
   return (
     <div>
      {/* Main Navigation */}
-     <header className="bg-gray-100">
-        {/* Top Bar */}
-        <div className="flex sm:hidden justify-between items-center px-4 py-4 text-sm bg-green-700 text-white">
-          <div className="flex space-x-4">
-            <span className="flex">
-              <span className="text-lg ">
-                <FiPhone />
-              </span>
-              (231) 555-0110
-            </span>
-            <span>|</span>
-            <span className="flex">
-              {" "}
-              <span className="text-2xl -mt-1">
-                <TiMail />
-              </span>{" "}
-              michael.s@example.com
-            </span>
-          </div>
-          <h1>Follow us and get a chance to win 80% off</h1>
-          <div className="flex items-center space-x-4">
-            <span>Follow us:</span>
-            <div className="flex space-x-4 text-2xl pr-4 ">
-              <a href="#" className="hover:text-gray-400">
-                <FaInstagram />
-              </a>
-              <a href="#" className="hover:text-gray-400">
-                <TiSocialYoutube />
-              </a>
-              <a href="#" className="hover:text-gray-400">
-                <FaFacebook />
-              </a>
-              <a href="#" className="hover:text-gray-400">
-                <FaTwitter />
-              </a>
+      <header className="bg-gray-100 mb-10">
+            {/* Top Bar */}
+            <div className="flex xs:hidden sm:hidden justify-between items-center px-4 py-4 text-sm bg-green-700 text-white">
+              <div className="flex space-x-4">
+                <span className="flex">
+                  <span className="text-lg ">
+                    <FiPhone />
+                  </span>
+                  (231) 555-0110
+                </span>
+                <span>|</span>
+                <span className="flex">
+                  {" "}
+                  <span className="text-2xl -mt-1">
+                    <TiMail />
+                  </span>{" "}
+                  michael.s@example.com
+                </span>
+              </div>
+              <h1>Follow us and get a chance to win 80% off</h1>
+              <div className="flex items-center space-x-4">
+                <span>Follow us:</span>
+                <div className="flex space-x-4 text-2xl pr-4 ">
+                  <a href="#" className="hover:text-gray-400">
+                    <FaInstagram />
+                  </a>
+                  <a href="#" className="hover:text-gray-400">
+                    <TiSocialYoutube />
+                  </a>
+                  <a href="#" className="hover:text-gray-400">
+                    <FaFacebook />
+                  </a>
+                  <a href="#" className="hover:text-gray-400">
+                    <FaTwitter />
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        {/* Main Navigation */}
-        <nav className="sm:flex-none lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center px-4 lgpy-4 shadow-md">
+    
+            {/* Main Navigation */}
+            <nav
+          className="lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center px-4
+          shadow-md"
+        >
           <div className="text-2xl font-bold text-gray-800">Bandage</div>
-          <ul className="sm:flex-none sm:mb-8 sm:ml-36 lg:flex space-x-6 md:space-x-2 text-gray-600 md:flex-wrap justify-center sm:space-x-4">
-            <li className="hover:text-blue-600 sm:ml-4">
+          <ul
+            className="xs:inline-flex sm:inline-flex xs:my-5 sm:my-5 xs:space-x-2 sm:space-x-2 
+          xs:text-[15px] sm:text-[15px] lg:mt-4 md:flex
+            lg:flex lg:space-x-6 md:space-x-2 text-gray-600 md:flex-wrap justify-center"
+          >
+            <li className="hover:text-blue-600">
               <a href="/">Home</a>
             </li>
 
-            <li className="hover:text-blue-600 flex">
+            <li className="hover:text-blue-600 flex xs:flex-none sm:flex-none">
               <a href="/Shop">Shop</a>
               <span className="pt-1 pl-2 pr-1 -mr-4">
                 <MdKeyboardArrowDown />
@@ -92,22 +97,21 @@ export default function Pricing1() {
               <a href="/Pages">Pages</a>
             </li>
           </ul>
-          <div className="flex items-center space-x-4">
-            <span className="text-lg pr-2">
-              <GoPerson />
-            </span>
-
-            <a href="#" className="text-gray-600 hover:text-blue-600 pr-5">
-              Login / Register
-            </a>
-            <div className="flex text-xl space-x-4 pr-5 font-semibold">
-              <IoIosSearch />
-              <IoCartOutline />
-              <CiHeart />
-            </div>
+          <div className="sm:flex md:flex lg:flex xs:py-2 sm:gap-28 xs:flex-none xs:ml-24 ">
+            <p className="lg:mt-2 lg:mr-12 md:mr-20 text-blue-500 xs:mt-2 sm:mt-2 font-bold">
+              Login
+            </p>
+            <button
+              className="md:text-sm sm:w-[400px] sm:text-center sm:tracking-tighter sm:p-1 xs:p-1
+          sm:h-12 sm:text-[15px] md:px-5 md:py-2.5 sm:mb-3 xs:mb-3
+          md:tracking-tighter md:w-44 md:-ml-11 lg:w-44 lg:px-6 lg:py-3 bg-blue-500 text-white 
+          lg:text-sm rounded-md"
+            >
+              Become a member ➡️{" "}
+            </button>
           </div>
         </nav>
-      </header>
+          </header>
 
 
 
@@ -150,12 +154,12 @@ export default function Pricing1() {
     </div>
 
 
-<div className="flex justify-center">
-    <Image src={"/picture/image3.png"} width={300} height={600} alt="fsss" className="h-[20rem]  ">
+<div className="lg:flex lg:justify-center md:flex md:justify-center">
+    <Image src={"/picture/image3.png"} width={300} height={600} alt="fsss" className="h-[20rem] sm:mx-1 xs:mx-1">
     </Image>
-    <Image src={"/picture/image2.png"} width={320} height={700} alt="fsss" className="h-[23rem] -mt-10">
+    <Image src={"/picture/image2.png"} width={320} height={700} alt="fsss" className="h-[23rem] xs:mr-3 sm:-mx-1 -mt-10">
     </Image>
-    <Image src={"/picture/image1.png"} width={300} height={600} alt="fsss" className="h-[20rem]">
+    <Image src={"/picture/image1.png"} width={300} height={600} alt="fsss" className="h-[20rem] xs:mx-1 sm:mx-1">
     </Image>
 </div>
 
@@ -179,4 +183,3 @@ export default function Pricing1() {
     </div>
   )
 }
-

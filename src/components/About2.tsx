@@ -53,6 +53,8 @@ export default function About2() {
                 src={member.image}
                 alt={member.name}
                 className="w-full h-full object-cover"
+                width={300}
+                height={300}
               />
             </div>
 
