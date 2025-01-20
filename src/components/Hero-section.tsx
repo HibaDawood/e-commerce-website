@@ -138,16 +138,7 @@ export default function HeroSection() {
             priority
           />
         </div>
-        <div className="absolute inset-0 hidden md:block">
-          <Image
-            src="/picture/t1.jpg"
-            alt="Fashion model with shopping bags"
-            width={1500}
-            height={1700}
-            className="object-cover h-[42rem] w-full"
-            priority
-          />
-        </div>
+        
       </div>
     </div>
   );
