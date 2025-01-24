@@ -139,7 +139,11 @@ export default function HeroSection() {
             priority
           />
         </div>
+<<<<<<< HEAD
       
+=======
+        
+>>>>>>> 7ce18017463fe73910082c2e3a3331cf069b035d
       </div>
     </div>
   );
