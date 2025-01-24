@@ -16,7 +16,8 @@ export default function HeroSection() {
       <header className="bg-gray-100">
         {/* Top Bar */}
         <div
-          className="lg:flex xs:hidden md:flex sm:hidden  justify-between lg:justify-between  lg:items-center items-center px-4 py-4 text-sm bg-gray-900
+          className="lg:flex xs:hidden md:flex sm:hidden  justify-between lg:justify-between 
+          g:items-center items-center px-4 py-4 text-sm bg-gray-900
          text-white sm:w-full md:w-full"
         >
           <div className="flex space-x-4">
@@ -96,7 +97,7 @@ export default function HeroSection() {
               <GoPerson />
             </span>
 
-            <a href="#" className="text-gray-600 hover:text-blue-600 pr-5">
+            <a href="/login" className="text-gray-600 hover:text-blue-600 pr-5">
               Login / Register
             </a>
             <div className="flex text-xl space-x-4 pr-5 font-semibold">
@@ -138,16 +139,7 @@ export default function HeroSection() {
             priority
           />
         </div>
-        <div className="absolute inset-0 hidden md:block">
-          <Image
-            src="/picture/t1.jpg"
-            alt="Fashion model with shopping bags"
-            width={1500}
-            height={1700}
-            className="object-cover h-[42rem] w-full"
-            priority
-          />
-        </div>
+      
       </div>
     </div>
   );
