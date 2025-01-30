@@ -2,7 +2,12 @@ import Image from "next/image";
 
 export default function About4() {
   return (
-    <div className="w-full">
+    <div
+      style={{
+        fontFamily: "Prompt",
+      }}
+      className="w-full"
+    >
       {/* Work With Us Section */}
       <section className="grid md:grid-cols-2">
         {/* Left Column */}

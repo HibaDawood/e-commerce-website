@@ -7,7 +7,12 @@ import {
 
 export default function Pricing3() {
   return (
-    <section className="container mx-auto px-4 py-16 max-w-xl text-center">
+    <section
+      style={{
+        fontFamily: "Prompt",
+      }}
+      className="container mx-auto px-4 py-16 max-w-xl text-center"
+    >
       <div className="space-y-6">
         <h2 className="text-2xl md:text-3xl font-bold">
           Start your 14 days free trial

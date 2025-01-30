@@ -2,7 +2,12 @@ import Image from "next/image";
 
 export default function ProductView() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div
+      style={{
+        fontFamily: "Prompt",
+      }}
+      className="container mx-auto px-4 py-8"
+    >
       <div className="grid gap-8 md:grid-cols-2">
         {/* Product Images */}
         <div className="space-y-4">
@@ -79,15 +84,11 @@ export default function ProductView() {
           {/* Product Tabs */}
           <div className="mt-8">
             <div className="flex gap-4 border-b">
-              <button className="py-2 px-4 text-gray-600 border-b-2 border-transparent hover:border-black">
-                Description
-              </button>
-              <button className="py-2 px-4 text-gray-600 border-b-2 border-transparent hover:border-black">
+              <button className="py-2 px-4 text-gray-600">Description</button>
+              <button className="py-2 px-4 text-gray-600">
                 Additional Information
               </button>
-              <button className="py-2 px-4 text-gray-600 border-b-2 border-transparent hover:border-black">
-                Reviews (5)
-              </button>
+              <button className="py-2 px-4 text-gray-600">Reviews (5)</button>
             </div>
             <div className="mt-4 text-gray-600">
               <p>

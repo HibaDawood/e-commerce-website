@@ -139,7 +139,11 @@ const products: Product[] = [
 ];
 export default function Shop1() {
   return (
-    <div>
+    <div
+      style={{
+        fontFamily: "Prompt",
+      }}
+    >
       <header className="bg-gray-100">
         {/* Top Bar */}
         <div

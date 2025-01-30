@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import Image from "next/image"
+import Image from "next/image";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 import { FaTwitter, FaInstagram } from "react-icons/fa";
@@ -8,9 +8,7 @@ import { TiSocialYoutube, TiMail } from "react-icons/ti";
 import { FaFacebook } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 
-
 export default function Pricing1() {
-
   const brands = [
     { name: "Hooli", logo: "/picture/fa1.png" },
     { name: "Hooli", logo: "/picture/fa2.png" },
@@ -21,49 +19,53 @@ export default function Pricing1() {
   ];
 
   return (
-    <div>
-     {/* Main Navigation */}
+    <div
+      style={{
+        fontFamily: "Prompt",
+      }}
+    >
+      {/* Main Navigation */}
       <header className="bg-gray-100 mb-10">
-            {/* Top Bar */}
-            <div className="flex xs:hidden sm:hidden justify-between items-center px-4 py-4 text-sm bg-green-700 text-white">
-              <div className="flex space-x-4">
-                <span className="flex">
-                  <span className="text-lg ">
-                    <FiPhone />
-                  </span>
-                  (231) 555-0110
-                </span>
-                <span>|</span>
-                <span className="flex">
-                  {" "}
-                  <span className="text-2xl -mt-1">
-                    <TiMail />
-                  </span>{" "}
-                  michael.s@example.com
-                </span>
-              </div>
-              <h1>Follow us and get a chance to win 80% off</h1>
-              <div className="flex items-center space-x-4">
-                <span>Follow us:</span>
-                <div className="flex space-x-4 text-2xl pr-4 ">
-                  <a href="#" className="hover:text-gray-400">
-                    <FaInstagram />
-                  </a>
-                  <a href="#" className="hover:text-gray-400">
-                    <TiSocialYoutube />
-                  </a>
-                  <a href="#" className="hover:text-gray-400">
-                    <FaFacebook />
-                  </a>
-                  <a href="#" className="hover:text-gray-400">
-                    <FaTwitter />
-                  </a>
-                </div>
-              </div>
+        {/* Top Bar */}
+        <div className="flex xs:hidden sm:hidden justify-between items-center px-4 py-4 text-sm bg-green-700 text-white">
+          <div className="flex space-x-4">
+            <span className="flex">
+              <span className="text-lg ">
+                <FiPhone />
+              </span>
+              (231) 555-0110
+            </span>
+            <span>|</span>
+            <span className="flex">
+              {" "}
+              <span className="text-2xl -mt-1">
+                <TiMail />
+              </span>{" "}
+              michael.s@example.com
+            </span>
+          </div>
+          <h1>Follow us and get a chance to win 80% off</h1>
+          <div className="flex items-center space-x-4">
+            <span>Follow us:</span>
+            <div className="flex space-x-4 text-2xl pr-4 ">
+              <a href="#" className="hover:text-gray-400">
+                <FaInstagram />
+              </a>
+              <a href="#" className="hover:text-gray-400">
+                <TiSocialYoutube />
+              </a>
+              <a href="#" className="hover:text-gray-400">
+                <FaFacebook />
+              </a>
+              <a href="#" className="hover:text-gray-400">
+                <FaTwitter />
+              </a>
             </div>
-    
-            {/* Main Navigation */}
-            <nav
+          </div>
+        </div>
+
+        {/* Main Navigation */}
+        <nav
           className="lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center px-4
           shadow-md"
         >
@@ -111,75 +113,94 @@ export default function Pricing1() {
             </button>
           </div>
         </nav>
-          </header>
+      </header>
 
+      <div className="max-w-6xl mx-auto px-4 py-16">
+        {/* Header */}
+        <div className="text-center mb-16 py-5 bg-gray-50">
+          <p className="text-sm text-gray-500 font-semibold uppercase mb-4">
+            PRICING
+          </p>
+          <h1 className="text-5xl font-bold mb-7">Simple Pricing</h1>
+          <div className="flex items-center justify-center gap-2 text-sm">
+            <span className="text-black font-semibold">Home</span>
+            <span className="text-gray-400">/</span>
+            <span className="text-gray-500 font-semibold">Pricing</span>
+          </div>
+        </div>
 
+        {/* Subtitle */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-2">Pricing</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Problems trying to resolve the conflict between <br />
+            the two major realms of Classical physics: Newtonian mechanics
+          </p>
+        </div>
 
-    <div className="max-w-6xl mx-auto px-4 py-16">
+        {/* Trust Badge */}
+        <div className="flex justify-center gap-5 mb-32">
+          <div className="text-center  text-black font-semibold mt-2">
+            Monthly
+          </div>
+          <div>
+            <Image
+              src={"/picture/button.png"}
+              alt="on / off"
+              width={40}
+              height={40}
+              className="mt-2.5"
+            />
+          </div>
+          <div className="text-center text-black font-semibold  mt-2">
+            Yearly
+          </div>
+          <button className="bg-blue-300 p-2 px-5 text-blue-700 rounded-3xl font-medium">
+            save 25%
+          </button>
+        </div>
 
-      {/* Header */}
-      <div className="text-center mb-16 py-5 bg-gray-50">
-        <p className="text-sm text-gray-500 font-semibold uppercase mb-4">PRICING</p>
-        <h1 className="text-5xl font-bold mb-7">Simple Pricing</h1>
-        <div className="flex items-center justify-center gap-2 text-sm">
-          <span className="text-black font-semibold">Home</span>
-          <span className="text-gray-400">/</span>
-          <span className="text-gray-500 font-semibold">Pricing</span>
+        <div className="lg:flex lg:justify-center md:flex md:justify-center">
+          <Image
+            src={"/picture/image3.png"}
+            width={300}
+            height={600}
+            alt="fsss"
+            className="h-[20rem] sm:mx-1 xs:mx-1"
+          ></Image>
+          <Image
+            src={"/picture/image2.png"}
+            width={320}
+            height={700}
+            alt="fsss"
+            className="h-[23rem] xs:mr-3 sm:-mx-1 -mt-10"
+          ></Image>
+          <Image
+            src={"/picture/image1.png"}
+            width={300}
+            height={600}
+            alt="fsss"
+            className="h-[20rem] xs:mx-1 sm:mx-1"
+          ></Image>
         </div>
       </div>
 
-      {/* Subtitle */}
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-2">Pricing</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          Problems trying to resolve the conflict between <br />
-          the two major realms of Classical physics: Newtonian mechanics
-        </p>
+      <h1 className="text-xl font-bold text-gray-700 text-center mt-10">
+        Trusted By Over 4,000 Big Companies
+      </h1>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center py-12 pt-32">
+        {brands.map((brand, index) => (
+          <div key={index} className="flex items-center justify-center">
+            <Image
+              src={brand.logo}
+              alt={brand.name}
+              width={100}
+              height={50}
+              className="opacity-50 hover:opacity-100 transition-opacity"
+            />
+          </div>
+        ))}
       </div>
-
-   
-
-      {/* Trust Badge */}
-      <div className="flex justify-center gap-5 mb-32">
-      <div className="text-center  text-black font-semibold mt-2">
-        Monthly
-      </div>
-      <div>
-        <Image src={"/picture/button.png"} alt="on / off" width={40} height={40} className="mt-2.5"/>
-      </div>
-      <div className="text-center text-black font-semibold  mt-2">
-        Yearly
-      </div>
-      <button className="bg-blue-300 p-2 px-5 text-blue-700 rounded-3xl font-medium">save 25%</button>
     </div>
-
-
-<div className="lg:flex lg:justify-center md:flex md:justify-center">
-    <Image src={"/picture/image3.png"} width={300} height={600} alt="fsss" className="h-[20rem] sm:mx-1 xs:mx-1">
-    </Image>
-    <Image src={"/picture/image2.png"} width={320} height={700} alt="fsss" className="h-[23rem] xs:mr-3 sm:-mx-1 -mt-10">
-    </Image>
-    <Image src={"/picture/image1.png"} width={300} height={600} alt="fsss" className="h-[20rem] xs:mx-1 sm:mx-1">
-    </Image>
-</div>
-
-    </div>
-
-<h1 className="text-xl font-bold text-gray-700 text-center mt-10">Trusted By Over 4,000 Big Companies</h1>
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center py-12 pt-32">
-          {brands.map((brand, index) => (
-            <div key={index} className="flex items-center justify-center">
-              <Image
-                src={brand.logo}
-                alt={brand.name}
-                width={100}
-                height={50}
-                className="opacity-50 hover:opacity-100 transition-opacity"
-              />
-            </div>
-          ))}
-        </div>
-    
-    </div>
-  )
+  );
 }

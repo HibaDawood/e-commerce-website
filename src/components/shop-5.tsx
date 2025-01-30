@@ -76,7 +76,12 @@ const Shop5 = () => {
     },
   ];
   return (
-    <div className="py-12 px-4 md:px-6 lg:px-8">
+    <div
+      style={{
+        fontFamily: "Prompt",
+      }}
+      className="py-12 px-4 md:px-6 lg:px-8"
+    >
       <div className="text-center mb-10">
         <h3 className="text-sm text-gray-600 mb-2">Featured Products</h3>
         <h2 className="text-2xl font-semibold">BESTSELLER PRODUCTS</h2>

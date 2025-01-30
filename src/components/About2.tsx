@@ -31,7 +31,12 @@ const teamMembers: TeamMember[] = [
 
 export default function About2() {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-16">
+    <section
+      style={{
+        fontFamily: "Prompt",
+      }}
+      className="max-w-6xl mx-auto px-4 py-16"
+    >
       {/* Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>

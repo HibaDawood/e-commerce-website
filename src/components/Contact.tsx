@@ -15,7 +15,11 @@ import { FiPhone } from "react-icons/fi";
 
 export default function ContactUs() {
   return (
-    <div>
+    <div
+      style={{
+        fontFamily: "Prompt",
+      }}
+    >
       {/* Main Navigation */}
       <header className="bg-gray-100 mb-10">
         {/* Top Bar */}

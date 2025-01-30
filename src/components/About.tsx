@@ -7,7 +7,11 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 export default function About() {
   return (
-    <div>
+    <div
+      style={{
+        fontFamily: "Prompt",
+      }}
+    >
       {/* Main Navigation */}
       <header className="bg-gray-100">
         {/* Main Navigation */}
@@ -88,6 +92,7 @@ export default function About() {
               <Image
                 src="/picture/about-1.png"
                 alt="Shopping woman"
+                loading="lazy"
                 width={500}
                 height={600}
                 className="relative z-10"

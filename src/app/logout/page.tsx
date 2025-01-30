@@ -1,4 +1,8 @@
-import Image from "next/image";
+"use client";
+
+import React from "react";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { FaInstagram } from "react-icons/fa6";
 import { TiSocialYoutube, TiMail } from "react-icons/ti";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
@@ -9,21 +13,34 @@ import { CiHeart } from "react-icons/ci";
 import { GoPerson } from "react-icons/go";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-export default function HeroSection() {
+const LogOut = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    // Check if user is logged in
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (isLoggedIn !== "true") {
+      router.push("/login");
+    }
+  }, [router]);
+
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
+    router.push("/login");
+  };
   return (
     <div
       style={{
         fontFamily: "Prompt",
       }}
-      className="w-full"
     >
       {/* Top Bar */}
       <header className="bg-gray-100">
         {/* Top Bar */}
         <div
           className="lg:flex xs:hidden md:flex sm:hidden  justify-between lg:justify-between 
-          g:items-center items-center px-4 py-4 text-sm bg-gray-900
-         text-white sm:w-full md:w-full"
+              g:items-center items-center px-4 py-4 text-sm bg-gray-900
+             text-white sm:w-full md:w-full"
         >
           <div className="flex space-x-4">
             <span className="flex">
@@ -65,13 +82,13 @@ export default function HeroSection() {
         {/* Main Navigation */}
         <nav
           className="lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center px-4
-          shadow-md"
+              shadow-md"
         >
           <div className="text-2xl font-bold text-gray-800">Bandage</div>
           <ul
             className="xs:inline-flex sm:inline-flex xs:my-5 sm:my-5 xs:space-x-2 sm:space-x-2 
-          xs:text-[15px] sm:text-[15px] lg:mt-4 md:flex
-            lg:flex lg:space-x-6 md:space-x-2 text-gray-600 md:flex-wrap justify-center"
+              xs:text-[15px] sm:text-[15px] lg:mt-4 md:flex
+                lg:flex lg:space-x-6 md:space-x-2 text-gray-600 md:flex-wrap justify-center"
           >
             <li className="hover:text-blue-600">
               <a href="/">Home</a>
@@ -116,39 +133,25 @@ export default function HeroSection() {
           </div>
         </nav>
       </header>
-
-      {/* Hero Section */}
-      <div className=" relative xs:h-[400px] sm:h-[500px] md:h-[700px] lg:h-[800px] hero-img overflow-hidden">
-        <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-16 z-10">
-          <div className="max-w-xl -mt-40">
-            <span className="text-white mb-4 block text-center sm:text-left">
-              SUMMER 2020
-            </span>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 text-center sm:text-left">
-              NEW COLLECTION
-            </h1>
-            <p className="text-white text-lg mb-8 text-center sm:text-left">
-              We know how large objects will act, but things on a small scale
-            </p>
-            <button className="bg-green-500 text-primary p-3 text-white font-bold tracking-wider px-6">
-              SHOP NOW
-            </button>
-          </div>
-        </div>
-
-        {/* Background Image */}
-        <div className="absolute inset-0 w-full h-full ">
-          <Image
-            src="/picture/t1.jpg"
-            alt="Fashion model with shopping bags"
-            loading="lazy"
-            width={1500}
-            height={1700}
-            className="object-cover h-full w-full"
-           
-          />
+      <div
+        className=" flex flex-col items-center justify-center bg-cover bg-center h-screen"
+        style={{ backgroundImage: "url('/picture/login.png')" }}
+      >
+        <div className="bg-[#d4edfda1] items-center flex flex-col p-6">
+          <h1 className="text-5xl font-bold mb-4">👋🏻 You have logged out!</h1>
+          <p className="mb-4 text-xl">We hope to see you again soon.</p>
+          <button
+            onClick={handleLogout}
+            className="py-2 px-5 border border-transparent rounded-md shadow-sm text-lg font-medium
+  text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2
+   focus:ring-red-500"
+          >
+            Logout
+          </button>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default LogOut;

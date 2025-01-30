@@ -1,114 +1,119 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
-import Link from "next/link"
-// import { Label } from "@/components/ui/label"
-// import { Alert, AlertDescription } from "@/components/ui/alert"
-// import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 export default function LoginPage() {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [error, setError] = useState("")
-  const router = useRouter()
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const router = useRouter();
 
-  const handleSubmit = async (e: React.FormEvent) => { 
-    e.preventDefault()
-    setError("")
+  useEffect(() => {
+    // Check if user is already logged in
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (isLoggedIn === "true") {
+      router.push("/");
+    }
+  }, [router]);
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Basic validation
     if (!email || !password) {
-      setError("Please fill in all fields")
-      return
+      setError("Plaese Input ypur Email and Password");
+      return;
     }
-
-    try {
-      // Here you would typically make an API call to your authentication endpoint
-      // For this example, we'll just simulate a successful login
-      console.log("Logging in with:", email, password)
-
-      // Simulate an API call delay
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-
-      // If login is successful, redirect to dashboard
-      router.push("/dashboard")
-    } catch (err) {
-      setError("Invalid email or password")
+    // Here you would typically validate against a backend
+    // For this example, we'll use a dummy check
+    if (email === "abc@gmail.com" && password === "123456") {
+      localStorage.setItem("isLoggedIn", "true");
+      router.push("/");
+    } else {
+      setError("Wrong Email or Password");
     }
-  }
+  };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-200">
-      <section className="w-full max-w-md bg-blue-200 p-8">
-        <div className="space-y-1">
-          <span className="text-3xl font-bold">Login / Register</span>
-          <p>Enter your email and password to login to your account</p>
-        </div>
-        <div>
-          <form onSubmit={handleSubmit} className="space-y-4 text-base">
-          <div className="space-y-6 space-x-2">
-              <label htmlFor="name">FirstName</label>
-              <input
-                id="name"
-                type="name"
-                placeholder="your name"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
+    <div
+      style={{
+        fontFamily: "Prompt",
+      }}
+      className="min-h-screen py-6 flex flex-col justify-center sm:py-12 bg-gradient-to-br
+     from-purple-400 via-blue-100 to-purple-500"
+    >
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="relative py-3 sm:max-w-xl sm:mx-auto"
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-300 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+        <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+          <div className="max-w-md mx-auto">
+            <div>
+              <h1 className="text-4xl font-serif italic text-gray-800 flex justify-center mb-8 font-bold">
+                Login
+              </h1>
             </div>
-            <div className="space-y-6 space-x-2">
-              <label htmlFor="name">Full Name</label>
-              <input
-                id="name"
-                type="name"
-                placeholder="your fullName"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-            <div className="space-y-6 space-x-10">
-              <label htmlFor="email">Email</label>
-              <input
-                id="email"
-                type="email"
-                placeholder="m@example.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-            <div className="space-y-3 space-x-3">
-              <label htmlFor="password">Password</label>
-              <input
-                id="password"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </div>
-            {error && (
-              <div>
-                <span>{error}</span>
+            {error && <p className="text-red-500 mb-4 text-center">{error}</p>}
+            <form onSubmit={handleSubmit} className="space-y-8">
+              <div className="relative">
+                <input
+                  id="email"
+                  name="email"
+                  type="text"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="peer h-14 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-rose-600"
+                  placeholder="Email address"
+                />
+                <label
+                  htmlFor="email"
+                  className="absolute left-0 -top-3.5 text-gray-700 text-sm transition-all peer-placeholder-shown:text-base
+                   peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 
+                   peer-focus:text-sm"
+                >
+                  Email Address
+                </label>
               </div>
-            )}
-            <button type="submit" className="w-full">
-              Login
-            </button>
-          </form>
+              <div className="relative">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="peer h-14 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent 
+                  focus:outline-none focus:border-rose-600"
+                  placeholder="Password"
+                />
+                <label
+                  htmlFor="password"
+                  className="absolute left-0 -top-3.5 text-gray-700 text-sm transition-all peer-placeholder-shown:text-base
+                   peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5
+                    peer-focus:text-gray-800 peer-focus:text-sm"
+                >
+                  Password
+                </label>
+              </div>
+              <div className="relative">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  type="submit"
+                  className="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-400 text-white font-semibold 
+                  rounded-lg shadow-md hover:from-cyan-500 hover:to-blue-950 focus:outline-none focus:ring-2 
+                  focus:ring-cyan-400 focus:ring-opacity-75"
+                >
+                  Login
+                </motion.button>
+              </div>
+            </form>
+          </div>
         </div>
-        <footer>
-          <p className="text-sm text-center w-full">
-            Don't have an account?{" "}
-            <Link href="/register" className="text-primary hover:underline">
-              Register here
-            </Link>
-          </p>
-        </footer>
-      </section>
+      </motion.div>
     </div>
-  )
+  );
 }
-

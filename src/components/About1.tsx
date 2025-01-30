@@ -3,9 +3,12 @@ import { RxTriangleRight } from "react-icons/rx";
 
 export default function About1() {
   return (
-    <div className="max-w-4xl  mx-auto px-4 py-12">
-      {/* Header Section */}
-
+    <div
+      style={{
+        fontFamily: "Prompt",
+      }}
+      className="max-w-4xl  mx-auto px-4 py-12"
+    >
       {/* Statistics Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
         <div className="text-center">

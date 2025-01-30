@@ -1,79 +1,85 @@
 import Image from "next/image";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { FaFacebook, FaTwitter, FaInstagram,FaLinkedin, FaFacebookSquare} from "react-icons/fa";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaFacebookSquare,
+} from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 
-
 export default function Pages1() {
-    interface TeamMember {
-        name: string;
-        profession: string;
-        image: string;
-        bgColor: string;
-      }
-      
-      const teamMembers: TeamMember[] = [
-        {
-          name: "Username",
-          profession: "Profession",
-          image: "/picture/ab-4.png",
-          bgColor: "bg-yellow-400",
-        },
-        {
-          name: "Username",
-          profession: "Profession",
-          image: "/picture/ab-10.jpg",
-          bgColor: "bg-gray-100",
-        },
-        {
-          name: "Username",
-          profession: "Profession",
-          image: "/picture/ab-5.png",
-          bgColor: "bg-blue-500",
-        },
-        {
-          name: "Username",
-          profession: "Profession",
-          image: "/picture/ab-3.png",
-          bgColor: "bg-blue-500",
-        },
-        {
-          name: "Username",
-          profession: "Profession",
-          image: "/picture/ab-7.png",
-          bgColor: "bg-blue-500",
-        },
-        {
-          name: "Username",
-          profession: "Profession",
-          image: "/picture/ab-1.jpg",
-          bgColor: "bg-blue-500",
-        },
-        {
-          name: "Username",
-          profession: "Profession",
-          image: "/picture/ab-2.png",
-          bgColor: "bg-blue-500",
-        },
-        {
-          name: "Username",
-          profession: "Profession",
-          image: "/picture/ab-8.png",
-          bgColor: "bg-blue-500",
-        },
-        {
-          name: "Username",
-          profession: "Profession",
-          image: "/picture/ab-9.png",
-          bgColor: "bg-blue-500",
-        },
-      ];
-  return (
-    <div>
-    
-    <header className="bg-gray-100">
-      
+  interface TeamMember {
+    name: string;
+    profession: string;
+    image: string;
+    bgColor: string;
+  }
 
+  const teamMembers: TeamMember[] = [
+    {
+      name: "Username",
+      profession: "Profession",
+      image: "/picture/ab-4.png",
+      bgColor: "bg-yellow-400",
+    },
+    {
+      name: "Username",
+      profession: "Profession",
+      image: "/picture/ab-10.jpg",
+      bgColor: "bg-gray-100",
+    },
+    {
+      name: "Username",
+      profession: "Profession",
+      image: "/picture/ab-5.png",
+      bgColor: "bg-blue-500",
+    },
+    {
+      name: "Username",
+      profession: "Profession",
+      image: "/picture/ab-3.png",
+      bgColor: "bg-blue-500",
+    },
+    {
+      name: "Username",
+      profession: "Profession",
+      image: "/picture/ab-7.png",
+      bgColor: "bg-blue-500",
+    },
+    {
+      name: "Username",
+      profession: "Profession",
+      image: "/picture/ab-1.jpg",
+      bgColor: "bg-blue-500",
+    },
+    {
+      name: "Username",
+      profession: "Profession",
+      image: "/picture/ab-2.png",
+      bgColor: "bg-blue-500",
+    },
+    {
+      name: "Username",
+      profession: "Profession",
+      image: "/picture/ab-8.png",
+      bgColor: "bg-blue-500",
+    },
+    {
+      name: "Username",
+      profession: "Profession",
+      image: "/picture/ab-9.png",
+      bgColor: "bg-blue-500",
+    },
+  ];
+  return (
+    <div
+      style={{
+        fontFamily: "Prompt",
+      }}
+    >
+      <header className="bg-gray-100">
         {/* Main Navigation */}
         <nav
           className="lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center px-4
@@ -125,87 +131,77 @@ export default function Pages1() {
         </nav>
       </header>
 
-
-
-
-    <section className="container mx-auto px-4 py-16 max-w-7xl">
-      <div className="text-center mb-12">
-        <p className="text-gray-500 uppercase tracking-wide mb-4 font-semibold">
-          WHAT WE DO
-        </p>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-700">
-          Innovation tailored for you
-        </h2>
-        <nav className="mt-4">
-          <ul className="flex justify-center gap-6">
-            <li>
-              <a href="#" className="text-gray-700 hover:text-gray-900 font-semibold">Home</a>
-            </li>
-           <span className="text-2xl text-gray-400"><IoIosArrowForward /></span> 
-            <li>
-              <a href="#" className="text-gray-400 hover:text-gray-600">Team</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-4">
-        {/* Large image on the left */}
-        <div className="relative aspect-[4/4] bg-red-600">
-          <Image
-            src="/picture/p-1.png"
-            alt="Fashion model in floral dress"
-            fill
-          />
+      <section className="container mx-auto px-4 py-16 max-w-7xl">
+        <div className="text-center mb-12">
+          <p className="text-gray-500 uppercase tracking-wide mb-4 font-semibold">
+            WHAT WE DO
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-700">
+            Innovation tailored for you
+          </h2>
+          <nav className="mt-4">
+            <ul className="flex justify-center gap-6">
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-700 hover:text-gray-900 font-semibold"
+                >
+                  Home
+                </a>
+              </li>
+              <span className="text-2xl text-gray-400">
+                <IoIosArrowForward />
+              </span>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-gray-600">
+                  Team
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
 
-        {/* 2x2 grid on the right */}
-        <div className="grid grid-cols-2 gap-4">
-          <div className="relative aspect-square bg-gray-200">
-            <div className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-white bg-black bg-opacity-30">
-              TAGS
+        <div className="grid md:grid-cols-2 gap-4">
+          {/* Large image on the left */}
+          <div className="relative aspect-[4/4] bg-red-600">
+            <Image
+              src="/picture/p-1.png"
+              alt="Fashion model in floral dress"
+              fill
+            />
+          </div>
+
+          {/* 2x2 grid on the right */}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="relative aspect-square bg-gray-200">
+              <div className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-white bg-black bg-opacity-30">
+                TAGS
+              </div>
+              <Image src="/picture/p-2.png" alt="Fashion photo 1" fill />
             </div>
-            <Image
-              src="/picture/p-2.png"
-              alt="Fashion photo 1"
-              fill
-        
-            />
-          </div>
-          <div className="relative aspect-square bg-gray-200">
-            <Image
-              src="/picture/p-3.png"
-              alt="Fashion photo 2"
-              fill
-             
-            />
-          </div>
-          <div className="relative aspect-square bg-gray-200">
-            <Image
-              src="/picture/p-4.png"
-              alt="Fashion photo 3"
-              fill
-            
-            />
-          </div>
-          <div className="relative aspect-square bg-gray-200">
-            <Image
-              src="/picture/p-5.png"
-              alt="Fashion photo 4"
-              fill
-            />
+            <div className="relative aspect-square bg-gray-200">
+              <Image src="/picture/p-3.png" alt="Fashion photo 2" fill />
+            </div>
+            <div className="relative aspect-square bg-gray-200">
+              <Image src="/picture/p-4.png" alt="Fashion photo 3" fill />
+            </div>
+            <div className="relative aspect-square bg-gray-200">
+              <Image src="/picture/p-5.png" alt="Fashion photo 4" fill />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-
-
-     {/* Team Members Grid */}
-     <h1 className="text-3xl text-center font-semibold text-gray-800 mt-10">Meet Our Team</h1>
-     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-24">
+      {/* Team Members Grid */}
+      <h1 className="text-3xl text-center font-semibold text-gray-800 mt-10">
+        Meet Our Team
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-24">
         {teamMembers.map((member, index) => (
-          <div key={index} className="flex flex-col items-center w-[23rem] mx-auto h-[25rem]">
+          <div
+            key={index}
+            className="flex flex-col items-center w-[23rem] mx-auto h-[25rem]"
+          >
             {/* Image Container */}
             <div
               className={`w-full aspect-[3/4] mb-4 overflow-hidden ${member.bgColor}`}
@@ -254,44 +250,42 @@ export default function Pages1() {
         ))}
       </div>
 
+      {/* LAST PAGE & NEW PAGE */}
 
-{/* LAST PAGE & NEW PAGE */}
+      <section className="container mx-auto px-4 py-16 max-w-xl text-center">
+        <div className="space-y-6">
+          <h2 className="text-2xl md:text-3xl font-bold">
+            Start your 14 days free trial
+          </h2>
 
-<section className="container mx-auto px-4 py-16 max-w-xl text-center">
-      <div className="space-y-6">
-        <h2 className="text-2xl md:text-3xl font-bold">
-          Start your 14 days free trial
-        </h2>
+          <p className="text-gray-600 max-w-md mx-auto">
+            Met minim Mollie non desert Alamo est sit clique dolor do met sent.
+            RELIT official consequent.
+          </p>
 
-        <p className="text-gray-600 max-w-md mx-auto">
-          Met minim Mollie non desert Alamo est sit clique dolor do met sent.
-          RELIT official consequent.
-        </p>
+          <button className="bg-blue-500 text-white px-8 py-3 rounded-md hover:bg-blue-600 transition-colors">
+            Try it free now
+          </button>
 
-        <button className="bg-blue-500 text-white px-8 py-3 rounded-md hover:bg-blue-600 transition-colors">
-          Try it free now
-        </button>
+          <div className="flex items-center justify-center gap-6 pt-4 text-2xl">
+            <a href="#" className="text-blue-400 hover:text-blue-600">
+              <FaTwitter />
+            </a>
 
-        <div className="flex items-center justify-center gap-6 pt-4 text-2xl">
-          <a href="#" className="text-blue-400 hover:text-blue-600">
-            <FaTwitter />
-          </a>
+            <a href="#" className="text-blue-900 hover:text-blue-950">
+              <FaFacebookSquare />
+            </a>
 
-          <a href="#" className="text-blue-900 hover:text-blue-950">
-            <FaFacebookSquare />
-          </a>
+            <a href="#" className="text-black hover:text-gray-800">
+              <FaInstagram />
+            </a>
 
-          <a href="#" className="text-black hover:text-gray-800">
-            <FaInstagram />
-          </a>
-
-          <a href="#" className="text-blue-600 hover:text-blue-800">
-            <FaLinkedin />
-          </a>
+            <a href="#" className="text-blue-600 hover:text-blue-800">
+              <FaLinkedin />
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
-
+      </section>
     </div>
-  )
+  );
 }
