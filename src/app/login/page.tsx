@@ -53,7 +53,7 @@ export default function LoginPage() {
         <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
           <div className="max-w-md mx-auto">
             <div>
-              <h1 className="text-4xl font-serif italic text-gray-800 flex justify-center mb-8 font-bold">
+              <h1 className="text-4xl text-gray-800 flex justify-center mb-8 font-bold">
                 Login
               </h1>
             </div>
@@ -66,7 +66,7 @@ export default function LoginPage() {
                   type="text"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="peer h-14 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-rose-600"
+                  className="h-14 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600"
                   placeholder="abc@gmail.com"
                 />
                 <label
@@ -85,7 +85,7 @@ export default function LoginPage() {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="peer h-14 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent 
+                  className="h-14 w-full border-b-2 border-gray-300 text-gray-900 
                   focus:outline-none focus:border-rose-600"
                   placeholder="123456"
                 />
