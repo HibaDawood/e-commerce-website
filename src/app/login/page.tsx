@@ -67,7 +67,7 @@ export default function LoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="peer h-14 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-rose-600"
-                  placeholder="Email address"
+                  placeholder="abc@gmail.com"
                 />
                 <label
                   htmlFor="email"
@@ -87,7 +87,7 @@ export default function LoginPage() {
                   onChange={(e) => setPassword(e.target.value)}
                   className="peer h-14 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent 
                   focus:outline-none focus:border-rose-600"
-                  placeholder="Password"
+                  placeholder="123456"
                 />
                 <label
                   htmlFor="password"
